@@ -1,0 +1,151 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeTarget = 8D5B49AC048680CD000E48DA /* NLPluginTemplate */;
+		addToTargets = (
+			8D5B49AC048680CD000E48DA /* NLPluginTemplate */,
+		);
+		breakpointsGroup = 83AC4A6C0B7D4D9D00DEACBF /* XCBreakpointsBucket */;
+		codeSenseManager = 83AC4A6B0B7D4D9D00DEACBF /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					200,
+					63,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 193895711;
+			PBXWorkspaceStateSaveDate = 193895711;
+		};
+		perUserProjectItems = {
+			836795450B8008C800BA9689 = 836795450B8008C800BA9689 /* PBXTextBookmark */;
+			836795470B8008C800BA9689 = 836795470B8008C800BA9689 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 83AC4A6A0B7D4D9D00DEACBF /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	836795450B8008C800BA9689 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 836795460B8008C800BA9689 /* COMPFUN.CPP */;
+		rLen = 0;
+		rLoc = 2147483647;
+		rType = 0;
+	};
+	836795460B8008C800BA9689 /* COMPFUN.CPP */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = COMPFUN.CPP;
+		path = /Volumes/DOS/CO127/4/COMPFUN.CPP;
+		sourceTree = "<absolute>";
+	};
+	836795470B8008C800BA9689 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 836795480B8008C800BA9689 /* COMPFUN.CPP */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1230;
+		vrLoc = 0;
+	};
+	836795480B8008C800BA9689 /* COMPFUN.CPP */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = file;
+		name = COMPFUN.CPP;
+		path = /Volumes/DOS/CO127/4/COMPFUN.CPP;
+		sourceTree = "<absolute>";
+	};
+	83AC4A6A0B7D4D9D00DEACBF /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	83AC4A6B0B7D4D9D00DEACBF /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	83AC4A6C0B7D4D9D00DEACBF /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = NLPluginTemplate;
+		objects = (
+		);
+	};
+	83AC4A6E0B7D4E4500DEACBF /* NLTemplatePlugin.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {459, 238}}";
+			sepNavSelRange = "{205, 0}";
+			sepNavVisRect = "{{0, 52}, {459, 186}}";
+			sepNavWindowFrame = "{{15, 149}, {577, 678}}";
+		};
+	};
+	83AC4A6F0B7D4E4500DEACBF /* NLTemplatePlugin.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {538, 605}}";
+			sepNavSelRange = "{347, 0}";
+			sepNavVisRect = "{{0, 0}, {538, 605}}";
+			sepNavWindowFrame = "{{90, 129}, {577, 678}}";
+		};
+	};
+	83AC4A820B7D552000DEACBF /* NLTestAction.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {459, 238}}";
+			sepNavSelRange = "{190, 0}";
+			sepNavVisRect = "{{0, 0}, {459, 186}}";
+			sepNavWindowFrame = "{{38, 128}, {577, 678}}";
+		};
+	};
+	83AC4A830B7D552000DEACBF /* NLTestAction.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {524, 1022}}";
+			sepNavSelRange = "{935, 0}";
+			sepNavVisRect = "{{0, 600}, {459, 186}}";
+			sepNavWindowFrame = "{{61, 107}, {577, 678}}";
+		};
+	};
+	8D5B49AC048680CD000E48DA /* NLPluginTemplate */ = {
+		activeExec = 0;
+	};
+}

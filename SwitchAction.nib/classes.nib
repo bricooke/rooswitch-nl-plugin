@@ -1,0 +1,20 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {cancel = id; setOptions = id; }; 
+            CLASS = OptionSheetController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {window = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {applicationChanged = id; profileChanged = id; }; 
+            CLASS = SwitchActionOptionSheetController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {applications = NSPopUpButton; profiles = NSPopUpButton; }; 
+            SUPERCLASS = OptionSheetController; 
+        }
+    ); 
+    IBVersion = 1; 
+}
