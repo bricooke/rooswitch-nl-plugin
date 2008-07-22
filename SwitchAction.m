@@ -68,7 +68,11 @@
 - (void)performAction
 {
     NSAppleScript *script = [[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@""
-        "tell application \"rooSwitch\" to tell document \"%@\" to tell profile \"%@\" to make active with allow quit\n",
+        "tell application \"rooSwitch\"\n"
+        " open POSIX file \"%@\"\n"
+        " tell document \"%@\" to tell profile \"%@\" to make active with allow quit\n"
+        "end tell\n",
+        [self valueForKeyPath:@"options.application"],
         [[self valueForKeyPath:@"options.application"] lastPathComponent],
         [self valueForKeyPath:@"options.profile"]]];
     NSLog(@"%@", [script source]);
