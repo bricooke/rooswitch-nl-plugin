@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <NLPlugin/OptionSheetController.h>
+#import "OptionSheetController.h"
 
 
 @interface SwitchActionOptionSheetController : OptionSheetController {

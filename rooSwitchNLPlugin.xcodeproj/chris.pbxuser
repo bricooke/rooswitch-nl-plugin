@@ -2,11 +2,10 @@
 {
 	089C1669FE841209C02AAC07 /* Project object */ = {
 		activeBuildConfigurationName = Release;
-		activeTarget = 8D5B49AC048680CD000E48DA /* NLPluginTemplate */;
+		activeTarget = 8D5B49AC048680CD000E48DA /* rooSwitchPlugin */;
 		addToTargets = (
-			8D5B49AC048680CD000E48DA /* NLPluginTemplate */,
+			8D5B49AC048680CD000E48DA /* rooSwitchPlugin */,
 		);
-		breakpointsGroup = 83AC4A6C0B7D4D9D00DEACBF /* XCBreakpointsBucket */;
 		codeSenseManager = 83AC4A6B0B7D4D9D00DEACBF /* Code sense */;
 		perUserDictionary = {
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
@@ -53,8 +52,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 193895711;
-			PBXWorkspaceStateSaveDate = 193895711;
+			PBXPerProjectTemplateStateSaveDate = 238385051;
+			PBXWorkspaceStateSaveDate = 238385051;
 		};
 		perUserProjectItems = {
 			836795450B8008C800BA9689 = 836795450B8008C800BA9689 /* PBXTextBookmark */;
@@ -90,7 +89,7 @@
 	};
 	836795480B8008C800BA9689 /* COMPFUN.CPP */ = {
 		isa = PBXFileReference;
-		lastKnownFileType = file;
+		lastKnownFileType = sourcecode.cpp.cpp;
 		name = COMPFUN.CPP;
 		path = /Volumes/DOS/CO127/4/COMPFUN.CPP;
 		sourceTree = "<absolute>";
@@ -107,45 +106,57 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	83AC4A6C0B7D4D9D00DEACBF /* XCBreakpointsBucket */ = {
-		isa = XCBreakpointsBucket;
-		name = NLPluginTemplate;
-		objects = (
-		);
-	};
-	83AC4A6E0B7D4E4500DEACBF /* NLTemplatePlugin.h */ = {
+	83AC4A6E0B7D4E4500DEACBF /* rooSwitchPlugin.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {459, 238}}";
-			sepNavSelRange = "{205, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {578, 403}}";
+			sepNavSelRange = "{170, 0}";
+			sepNavVisRange = "{0, 243}";
 			sepNavVisRect = "{{0, 52}, {459, 186}}";
 			sepNavWindowFrame = "{{15, 149}, {577, 678}}";
 		};
 	};
-	83AC4A6F0B7D4E4500DEACBF /* NLTemplatePlugin.m */ = {
+	83AC4A6F0B7D4E4500DEACBF /* rooSwitchPlugin.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {538, 605}}";
-			sepNavSelRange = "{347, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {578, 403}}";
+			sepNavSelRange = "{257, 0}";
+			sepNavVisRange = "{0, 365}";
 			sepNavVisRect = "{{0, 0}, {538, 605}}";
 			sepNavWindowFrame = "{{90, 129}, {577, 678}}";
 		};
 	};
-	83AC4A820B7D552000DEACBF /* NLTestAction.h */ = {
+	83AC4A820B7D552000DEACBF /* SwitchAction.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {459, 238}}";
-			sepNavSelRange = "{190, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {578, 403}}";
+			sepNavSelRange = "{165, 0}";
+			sepNavVisRange = "{0, 243}";
 			sepNavVisRect = "{{0, 0}, {459, 186}}";
 			sepNavWindowFrame = "{{38, 128}, {577, 678}}";
 		};
 	};
-	83AC4A830B7D552000DEACBF /* NLTestAction.m */ = {
+	83AC4A830B7D552000DEACBF /* SwitchAction.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {524, 1022}}";
-			sepNavSelRange = "{935, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {578, 1386}}";
+			sepNavSelRange = "{1109, 0}";
+			sepNavVisRange = "{552, 726}";
 			sepNavVisRect = "{{0, 600}, {459, 186}}";
 			sepNavWindowFrame = "{{61, 107}, {577, 678}}";
 		};
 	};
-	8D5B49AC048680CD000E48DA /* NLPluginTemplate */ = {
+	8D5B49AC048680CD000E48DA /* rooSwitchPlugin */ = {
 		activeExec = 0;
+	};
+	D6A4F2E90BA796A70013D265 /* SwitchActionOptionSheetController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {578, 403}}";
+			sepNavSelRange = "{224, 0}";
+			sepNavVisRange = "{0, 470}";
+		};
+	};
+	D6A4F2EA0BA796A70013D265 /* SwitchActionOptionSheetController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {828, 1302}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 880}";
+		};
 	};
 }

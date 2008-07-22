@@ -30,10 +30,10 @@
 - (NLAction *)actionForID:(NSString *)actionID;
 - (NSBundle *)bundle;
 
-//Action must be overriden
+//Must be overriden
 //Return an array of the classes of NLAction in your plugin.
 /**
- * This is the only instance you must implement in your subclass. Since there's no
+ * This is the only method you must implement in your subclass. Since there's no
  * good way to autodetect the NLAction subclasses within the bundle, or at least I
  * haven't found a suitable way yet, you have to implement this method to let
  * NetworkLocation know.
@@ -43,6 +43,8 @@
  * {
  *   return [NSArray arrayWithObject:[MySuperCoolNLActionSubclass class]];
  * }
+ *
+ * Note that you can use this method 
  */
 - (NSArray *)actions;
 

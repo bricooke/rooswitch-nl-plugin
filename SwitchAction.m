@@ -20,18 +20,29 @@
     return @"SwitchAction";
 }
 
-/* the category that the action will appear in in the "add action" sheet
-*/
-+ (NSString *)category
-{
-    return @"rooSwitch";
-}
-
 /* the name that will appear in the "add action" sheet
 */
 + (NSString *)title
 {
-    return @"Switch Profiles";
+    return @"rooSwitch…";
+}
+
++ (NSImage *)icon
+{
+    static NSImage * icon = nil;
+    if (!icon) {
+        NSString * path = [[NSWorkspace sharedWorkspace] 
+                           fullPathForApplication: @"rooSwitch"];
+        path = [path stringByAppendingPathComponent: @"Contents/Resources/rooSwitch.icns"];
+        icon = [[NSImage alloc] initWithContentsOfFile: path];
+    }
+    return icon;
+}
+
++ (BOOL)invisible
+{
+    NSString * path = [[NSWorkspace sharedWorkspace] fullPathForApplication: @"rooSwitch"];
+    return !path;
 }
 
 - (NSDictionary *)optionDefaults
@@ -69,7 +80,7 @@
 */
 - (void)cleanupAction
 {
-    
+
 }
 
 /* Returns the overridden thingy */

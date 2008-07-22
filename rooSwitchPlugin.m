@@ -13,17 +13,9 @@
 
 - (NSArray *)actions
 {
-    if ([[NSWorkspace sharedWorkspace] fullPathForApplication:@"rooSwitch"])
-    {
-        return [NSArray arrayWithObjects:
+    return [NSArray arrayWithObjects:
             [rooSwitchSwitchAction class],
             nil];
-    }
-    else
-    {
-        // rooSwitch not installed
-        return nil;
-    }
 }
 
 @end

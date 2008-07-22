@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <NLPlugin/NLPlugin.h>
+#import "NLPlugin.h"
 
 @interface rooSwitchNLPlugin : NLPlugin {
 

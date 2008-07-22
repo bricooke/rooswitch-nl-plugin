@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <NLPlugin/NLAction.h>
+#import "NLAction.h"
 
 @interface rooSwitchSwitchAction : NLAction {
 

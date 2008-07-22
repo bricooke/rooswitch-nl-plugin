@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 44;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		83AC4A700B7D4E4500DEACBF /* rooSwitchPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC4A6F0B7D4E4500DEACBF /* rooSwitchPlugin.m */; };
 		83AC4A810B7D550C00DEACBF /* SwitchAction.nib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC4A800B7D550C00DEACBF /* SwitchAction.nib */; };
 		83AC4A840B7D552000DEACBF /* SwitchAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC4A830B7D552000DEACBF /* SwitchAction.m */; };
-		83AC4A960B7D588100DEACBF /* NLPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83AC4A950B7D588100DEACBF /* NLPlugin.framework */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		D6A4F2EB0BA796A70013D265 /* SwitchActionOptionSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A4F2EA0BA796A70013D265 /* SwitchActionOptionSheetController.m */; };
@@ -27,9 +26,11 @@
 		83AC4A800B7D550C00DEACBF /* SwitchAction.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = SwitchAction.nib; sourceTree = "<group>"; };
 		83AC4A820B7D552000DEACBF /* SwitchAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchAction.h; sourceTree = "<group>"; };
 		83AC4A830B7D552000DEACBF /* SwitchAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchAction.m; sourceTree = "<group>"; };
-		83AC4A950B7D588100DEACBF /* NLPlugin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NLPlugin.framework; sourceTree = "<group>"; };
+		83C32B920E3580500091B208 /* NLAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLAction.h; sourceTree = "<group>"; };
+		83C32B930E3580500091B208 /* NLPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLPlugin.h; sourceTree = "<group>"; };
+		83C32B940E3580500091B208 /* OptionSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionSheetController.h; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* rooSwitchPlugin.nlplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rooSwitchPlugin.nlplugin; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		D6A4F2E90BA796A70013D265 /* SwitchActionOptionSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchActionOptionSheetController.h; sourceTree = "<group>"; };
 		D6A4F2EA0BA796A70013D265 /* SwitchActionOptionSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchActionOptionSheetController.m; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
-				83AC4A960B7D588100DEACBF /* NLPlugin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +51,7 @@
 		089C166AFE841209C02AAC07 /* NLPluginTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				83C32B7D0E3578BA0091B208 /* NLPlugin */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
 				32C88E010371C26100C91783 /* Other Sources */,
 				089C167CFE841241C02AAC07 /* Resources */,
@@ -95,7 +96,6 @@
 		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				83AC4A950B7D588100DEACBF /* NLPlugin.framework */,
 				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -127,6 +127,16 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		83C32B7D0E3578BA0091B208 /* NLPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				83C32B920E3580500091B208 /* NLAction.h */,
+				83C32B930E3580500091B208 /* NLPlugin.h */,
+				83C32B940E3580500091B208 /* OptionSheetController.h */,
+			);
+			name = NLPlugin;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,9 +164,11 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "rooSwitchNLPlugin" */;
+			compatibilityVersion = "Xcode 3.0";
 			hasScannedForEncodings = 1;
 			mainGroup = 089C166AFE841209C02AAC07 /* NLPluginTemplate */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D5B49AC048680CD000E48DA /* rooSwitchPlugin */,
 			);
@@ -251,18 +263,28 @@
 			buildSettings = {
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
 				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
 			name = Debug;
 		};
 		1DEB914008733D840010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
 				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
 			name = Release;
 		};

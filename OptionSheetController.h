@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "NLAction.h"
 
 @class NLAction;
 
@@ -31,6 +32,11 @@
     BOOL cancelled;
     BOOL deleteIfCancelled;
 }
+
+@property (readonly) NLAction * action;
+@property (readonly) NSBundle * nibBundle;
+@property (readonly) NSMutableDictionary * options;
+@property (readonly) NSWindow * parentWindow;
 
 + (id)optionSheetControllerWithNibName:(NSString *)nibName
                               inBundle:(NSBundle *)bundle
