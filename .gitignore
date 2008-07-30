@@ -1,1 +1,4 @@
-rooSwitchNLPlugin.xcodeproj/bcooke.*
+build/
+.DS_Store
+*.xcodeproj/*.mode?v3
+*.xcodeproj/*.pbxuser
