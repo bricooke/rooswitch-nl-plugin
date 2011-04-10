@@ -75,7 +75,7 @@
         [self valueForKeyPath:@"options.application"],
         [[self valueForKeyPath:@"options.application"] lastPathComponent],
         [self valueForKeyPath:@"options.profile"]]];
-    NSLog(@"%@", [script source]);
+    //NSLog(@"%@", [script source]);
     [script executeAndReturnError:nil];
 }
 

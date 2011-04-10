@@ -7,9 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "NLAction.h"
+#import "SKAction.h"
 
-@class NLAction;
+@class SKAction;
 
 /**
  * OptionSheetController serves two purposes: loading and managing the nib containing
@@ -20,8 +20,9 @@
  * interfaces. Don't touch other methods, just create your own for use with the
  * interface.
  */
-@interface OptionSheetController : NSWindowController {
-    NLAction * action;
+__attribute__((visibility("default")))
+@interface SKOptionSheetController : NSWindowController {
+    SKAction * action;
     NSBundle * nibBundle;
     NSMutableDictionary * options;
     NSWindow * parentWindow;
@@ -33,17 +34,17 @@
     BOOL deleteIfCancelled;
 }
 
-@property (readonly) NLAction * action;
+@property (readonly) SKAction * action;
 @property (readonly) NSBundle * nibBundle;
 @property (readonly) NSMutableDictionary * options;
 @property (readonly) NSWindow * parentWindow;
 
 + (id)optionSheetControllerWithNibName:(NSString *)nibName
                               inBundle:(NSBundle *)bundle
-                             forAction:(NLAction *)anAction;
+                             forAction:(SKAction *)anAction;
 
 - (id)initWithWindowNibName:(NSString *)nibName inBundle:(NSBundle *)bundle
-                  forAction:(NLAction *)anAction;
+                  forAction:(SKAction *)anAction;
 
 
 - (BOOL)cancelled;

@@ -7,9 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "NLPlugin.h"
+#import "SKPlugin.h"
 
-@interface rooSwitchNLPlugin : NLPlugin {
+@interface rooSwitchNLPlugin : SKPlugin {
 
 }
 

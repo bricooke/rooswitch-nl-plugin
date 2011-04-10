@@ -7,10 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "OptionSheetController.h"
+#import "SKOptionSheetController.h"
 
 
-@interface SwitchActionOptionSheetController : OptionSheetController {
+@interface SwitchActionOptionSheetController : SKOptionSheetController {
     IBOutlet NSPopUpButton *applications;
     IBOutlet NSPopUpButton *profiles;
 }

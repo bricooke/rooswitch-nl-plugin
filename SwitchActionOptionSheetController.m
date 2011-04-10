@@ -51,7 +51,7 @@
 {
     [options setValue:[[applications selectedItem] representedObject] forKey:@"application"];
     NSString *rooSwitchFile = [options valueForKey:@"application"];
-    NSLog(@"Now we have %@", rooSwitchFile);
+    //NSLog(@"Now we have %@", rooSwitchFile);
     
     [profiles removeAllItems];
     [profiles setEnabled:YES];
@@ -72,7 +72,7 @@
     }
     
     NSArray *matches = [xmlDoc nodesForXPath:@".//object[@type=\"PROFILE\"]//attribute[@name=\"name\"]" error:&err];
-    NSLog(@"Matches = %@ - err = %@", matches, err);
+    //NSLog(@"Matches = %@ - err = %@", matches, err);
     
     NSEnumerator *enumerator = [matches objectEnumerator];
     NSXMLNode *profile = nil;

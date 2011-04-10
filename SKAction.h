@@ -1,35 +1,36 @@
 //
-//  NLAction.h
-//  NetworkLocation
+//  SKAction.h
+//  Sidekick
 //
 //  Created by Chris Farber on 2/7/07.
-//  Copyright 2007 Chris Farber. All rights reserved.
+//  Copyright 2007-2011 Oomph. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
 
 
 enum {
-	NLPluginCategoryPlugin = 0,
-	NLPluginCategorySystem = 1,
-	NLPluginCategoryApplication = 2
+	SKPluginCategoryPlugin = 0,
+	SKPluginCategorySystem = 1,
+	SKPluginCategoryApplication = 2
 };
-typedef NSUInteger NLPluginCategory;
+typedef NSUInteger SKPluginCategory;
 
-extern NSString * NLPluginCategoryName(NLPluginCategory category);
+extern NSString * SKPluginCategoryName(SKPluginCategory category);
 
-@class NLPlugin, OptionSheetController, Location;
+@class SKPlugin, SKOptionSheetController;
 
 /**
- * Every action must be a subclass of NLAction.
+ * Every action must be a subclass of SKAction.
  * Methods you will need to implement:
  *      +actionID, +category, +title, -performAction, -cleanupAction
  * Usually, you will also want to override:
  *      -title, -optionDefaults, +icon, -icon
  */
-@interface NLAction : NSObject {
+__attribute__((visibility("default")))
+@interface SKAction : NSObject {
     @private
-    NLPlugin * plugin;
+    SKPlugin * plugin;
     NSMutableDictionary * plist;
 }
 
@@ -45,9 +46,9 @@ extern NSString * NLPluginCategoryName(NLPluginCategory category);
 /**
  * Returns the name of the category the action will appear under.
  * You shouldn't override this without good reason; the default implementation
- * returns NLPluginCategoryPlugin
+ * returns SKPluginCategoryPlugin
  */
-+ (NLPluginCategory) category;
++ (SKPluginCategory) category;
 
 /**
  * Returns the description the user will see when adding an action.
@@ -72,16 +73,21 @@ extern NSString * NLPluginCategoryName(NLPluginCategory category);
 + (BOOL) invisible;
 
 /**
+ * Let Sidekick know if this action should be included in new new locations
+ * that are created as a snapshot of the user machine's current state.
+ * The default implementation returns NO.  
+ */
++ (BOOL) snapshotable;
+
+/**
  * Returns an icon that will be displayed to the user in the list of available
  * actions. The default is [NSImage imageNamed: @"NSAdvanced"]
  */
 + (NSImage *) icon;
 
 + (id)actionWithPlist: (NSMutableDictionary *)entry;
-+ (id)newActionInLocation: (Location *)location;
 
 - (id)initWithPlist: (NSMutableDictionary *)entry;
-- (id)initNewInLocation: (Location *)location;
 
 - (NSMutableDictionary *) plist;
 
@@ -94,15 +100,15 @@ extern NSString * NLPluginCategoryName(NLPluginCategory category);
 - (void) setEnabled: (NSNumber *)enabled;
 
 /**
- * Returns the parent instance of NLPlugin.
+ * Returns the parent instance of SKPlugin.
  */
-- (NLPlugin *) plugin;
+- (SKPlugin *) plugin;
 - (NSString * )pluginID;
 
 - (void) triggerTitleUpdate;
 
 /**
- * Let NetworkLocation know if this action has options.
+ * Let Sidekick know if this action has options.
  * The default implementation searches for a nib file matching the action's ID,
  * and returns an NSNumber containing YES if found. You only need to override this
  * method if your nib's filename does not match +(NSString *)actionID
@@ -127,7 +133,7 @@ extern NSString * NLPluginCategoryName(NLPluginCategory category);
  * @see optionSheetControllerClass
  * @see actionID
  */
-- (OptionSheetController *) optionSheetController;
+- (SKOptionSheetController *) optionSheetController;
 
 /**
  * Return an NSDictionary containing default options. When the action is instantiated
@@ -152,14 +158,14 @@ extern NSString * NLPluginCategoryName(NLPluginCategory category);
 
 
 /**
- * performAction is invoked by NetworkLocation when it wants the action to do its
+ * performAction is invoked by Sidekick when it wants the action to do its
  * stuff.
  * MUST BE OVERRIDEN.
  */
 - (void) performAction;
 
 /**
- * cleanupAction is invoked by NetworkLocation when it wants the action to clean up
+ * cleanupAction is invoked by Sidekick when it wants the action to clean up
  * after itself. In other words, if you want to undo anything done by your action,
  * such as set the system volume back to the value it was before performAction
  * changed it, this is the place to do it.

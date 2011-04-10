@@ -7,9 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "NLAction.h"
+#import "SKAction.h"
 
-@interface rooSwitchSwitchAction : NLAction {
+@interface rooSwitchSwitchAction : SKAction {
 
 }
 

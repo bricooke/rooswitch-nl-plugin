@@ -21,15 +21,15 @@
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCF630370AF2F00C91783 /* rooSwitchNLPlugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rooSwitchNLPlugin_Prefix.pch; sourceTree = "<group>"; };
+		5FD2D86313523D080030D6A2 /* SKPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPlugin.h; sourceTree = "<group>"; };
+		5FD2D86413523D080030D6A2 /* SKAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAction.h; sourceTree = "<group>"; };
+		5FD2D86513523D080030D6A2 /* SKOptionSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKOptionSheetController.h; sourceTree = "<group>"; };
 		83AC4A6E0B7D4E4500DEACBF /* rooSwitchPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rooSwitchPlugin.h; sourceTree = "<group>"; };
 		83AC4A6F0B7D4E4500DEACBF /* rooSwitchPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rooSwitchPlugin.m; sourceTree = "<group>"; };
 		83AC4A800B7D550C00DEACBF /* SwitchAction.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = SwitchAction.nib; sourceTree = "<group>"; };
 		83AC4A820B7D552000DEACBF /* SwitchAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchAction.h; sourceTree = "<group>"; };
 		83AC4A830B7D552000DEACBF /* SwitchAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchAction.m; sourceTree = "<group>"; };
-		83C32B920E3580500091B208 /* NLAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLAction.h; sourceTree = "<group>"; };
-		83C32B930E3580500091B208 /* NLPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLPlugin.h; sourceTree = "<group>"; };
-		83C32B940E3580500091B208 /* OptionSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionSheetController.h; sourceTree = "<group>"; };
-		8D5B49B6048680CD000E48DA /* rooSwitchPlugin.nlplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rooSwitchPlugin.nlplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B6048680CD000E48DA /* rooSwitchPlugin.skplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rooSwitchPlugin.skplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		D6A4F2E90BA796A70013D265 /* SwitchActionOptionSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchActionOptionSheetController.h; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		089C166AFE841209C02AAC07 /* NLPluginTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				83C32B7D0E3578BA0091B208 /* NLPlugin */,
+				83C32B7D0E3578BA0091B208 /* SKPlugin */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
 				32C88E010371C26100C91783 /* Other Sources */,
 				089C167CFE841241C02AAC07 /* Resources */,
@@ -114,7 +114,7 @@
 		19C28FB8FE9D52D311CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D5B49B6048680CD000E48DA /* rooSwitchPlugin.nlplugin */,
+				8D5B49B6048680CD000E48DA /* rooSwitchPlugin.skplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,14 +127,14 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		83C32B7D0E3578BA0091B208 /* NLPlugin */ = {
+		83C32B7D0E3578BA0091B208 /* SKPlugin */ = {
 			isa = PBXGroup;
 			children = (
-				83C32B920E3580500091B208 /* NLAction.h */,
-				83C32B930E3580500091B208 /* NLPlugin.h */,
-				83C32B940E3580500091B208 /* OptionSheetController.h */,
+				5FD2D86313523D080030D6A2 /* SKPlugin.h */,
+				5FD2D86413523D080030D6A2 /* SKAction.h */,
+				5FD2D86513523D080030D6A2 /* SKOptionSheetController.h */,
 			);
-			name = NLPlugin;
+			name = SKPlugin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +155,7 @@
 			name = rooSwitchPlugin;
 			productInstallPath = "$(HOME)/Library/Bundles";
 			productName = NLPluginTemplate;
-			productReference = 8D5B49B6048680CD000E48DA /* rooSwitchPlugin.nlplugin */;
+			productReference = 8D5B49B6048680CD000E48DA /* rooSwitchPlugin.skplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -165,7 +165,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "rooSwitchNLPlugin" */;
 			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 089C166AFE841209C02AAC07 /* NLPluginTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -215,6 +222,8 @@
 		1DEB913B08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -223,6 +232,7 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -230,7 +240,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				PRODUCT_NAME = rooSwitchPlugin;
-				WRAPPER_EXTENSION = nlplugin;
+				WRAPPER_EXTENSION = skplugin;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -238,15 +248,14 @@
 		1DEB913C08733D840010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -254,7 +263,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				PRODUCT_NAME = rooSwitchPlugin;
-				WRAPPER_EXTENSION = nlplugin;
+				WRAPPER_EXTENSION = skplugin;
 			};
 			name = Release;
 		};
